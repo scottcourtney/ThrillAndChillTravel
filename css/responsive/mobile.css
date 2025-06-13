@@ -37,7 +37,9 @@
 
     nav.nav-links.show {
         display: flex;
+        flex-direction: column;
     }
+    
 
     .dropdown-content {
         position: static;
