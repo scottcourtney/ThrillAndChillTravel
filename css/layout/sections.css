@@ -1,0 +1,16 @@
+/* === Sections === */
+section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.intro {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.services,
+.testimonials,
+.contact {
+    background-color: #f0f4f8;
+}

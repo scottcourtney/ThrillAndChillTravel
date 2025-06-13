@@ -1,0 +1,52 @@
+/* === Carousel === */
+.carousel-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    padding: 0;
+    /* Remove top/bottom padding */
+    box-sizing: border-box;
+    line-height: 0;
+    /* Removes extra spacing from inline elements */
+}
+
+.carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    animation: scroll 80s linear infinite;
+    gap: 2rem;
+    padding: 0 2rem;
+    /* Only horizontal padding */
+}
+
+.carousel-track img {
+    width: 214.25px;
+    height: 174.25px;
+    /* Adjust as needed to reduce vertical space */
+    object-fit: contain;
+    flex-shrink: 0;
+    transition: filter 0.3s;
+    display: block;
+    /* Removes bottom whitespace from inline images */
+}
+
+.carousel-track img:hover {
+    transform: scale(1.25);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}

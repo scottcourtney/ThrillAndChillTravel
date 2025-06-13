@@ -1,0 +1,27 @@
+.testimonials blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #333;
+  }
+  
+  .testimonials blockquote {
+    position: relative;
+  }
+  .testimonials blockquote::after {
+    content: '';
+    /* optional decorative quote icon */
+  }
+
+  /* If splitting text and attribution: */
+  .testimonials blockquote {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonials blockquote span.author {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    text-align: right;
+    color: #555;
+  }
+  

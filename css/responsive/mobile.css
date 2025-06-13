@@ -1,0 +1,81 @@
+
+/* === Mobile Styles === */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* hide nav links on mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 1rem 0;
+        z-index: 999;
+    }
+
+    nav.nav-links.show {
+        display: flex;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding-left: 1.5rem;
+    }
+
+    .site-header {
+        flex-wrap: nowrap;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    nav a {
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-content {
+        position: relative;
+        background-color: #1a3f52;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .form-section,
+    .info-section {
+        padding: 2rem 1rem;
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}

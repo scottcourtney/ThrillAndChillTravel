@@ -1,0 +1,167 @@
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 2rem;
+    padding: 2rem 15rem 3rem 15rem; /* top, right, bottom, left */
+}
+  
+  .blog-post-vertical {
+    background: white;
+    border: 1px solid #ebeaea;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-post-vertical .post-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .post-content {
+    padding: 1.5rem;
+    text-align: left; /* Align all text to the left */
+  }
+  
+  .post-content h2 a {
+    font-family: 'Amaranth', sans-serif;
+    text-align: left;
+    text-decoration: none;
+    color: #1a3f52; /* Example dark blue – change to whatever you prefer */
+  }
+
+  .post-content h2 a:hover {
+    color: #1da2e5; /* optional: hover color */
+  }
+
+  
+  .post-content p,
+  .post-content .meta {
+    font-family: 'Montserrat', sans-serif;
+    color: #747474;
+    text-align: left;
+  }
+  
+  .post-content .meta {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .post-content hr {
+    margin: 1rem 0;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+
+
+  /* Blog Coming Soon Page Styles */
+
+/* Container centers content */
+.coming-soon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    min-height: calc(100vh - 200px); /* adjust if header+footer have known height */
+    background-color: #f7fafc;
+  }
+  
+  /* Box with max-width */
+  .coming-soon-box {
+    background: white;
+    padding: 2rem 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Heading with Amaranth font */
+  .coming-soon-box h1 {
+    font-family: 'Amaranth', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a3f52;
+  }
+  
+  /* Paragraph with Montserrat */
+  .coming-soon-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  /* Signup Form */
+  .signup-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+  
+  .input-group input[type="email"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  
+  .input-group button.btn {
+    background-color: #f56800;
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .input-group button.btn:hover {
+    background-color: #e55a00;
+  }
+  
+  /* Back to home link */
+  .back-home a {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b6cb0;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .back-home a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 480px) {
+    .coming-soon-box {
+      padding: 1.5rem 1rem 2rem;
+    }
+    .coming-soon-box h1 {
+      font-size: 1.75rem;
+    }
+    .input-group {
+      flex-direction: column;
+    }
+    .input-group button.btn {
+      width: 100%;
+    }
+  }
+  
