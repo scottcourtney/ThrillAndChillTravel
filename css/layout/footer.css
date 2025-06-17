@@ -16,3 +16,36 @@ footer {
 .no-blue-link:hover {
     text-decoration: underline;
 }
+
+.footer-compact {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #1a3f52;
+    flex-wrap: wrap;
+  }
+  
+  .footer-center p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0 2rem;
+  }
+  
+  .social-icon img {
+    width: 44px;
+    height: 44px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s;
+    padding: 0 0.25rem;
+  }
+  
+  .social-icon:hover img {
+    transform: scale(1.1);
+  }
+  

@@ -1,4 +1,4 @@
-const imageFolder = 'images/travel_partners/';
+const imageFolder = '/images/travel_partners/';
 const imageFiles = [
   'away-we-go-logo.png',
   'Carnival.jpg',
