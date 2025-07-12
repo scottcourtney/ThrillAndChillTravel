@@ -57,111 +57,150 @@
     border-top: 1px solid #ddd;
   }
 
-
-  /* Blog Coming Soon Page Styles */
-
-/* Container centers content */
-.coming-soon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 1rem;
-    min-height: calc(100vh - 200px); /* adjust if header+footer have known height */
-    background-color: #f7fafc;
+  /* blog page */
+  body.blog-page {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
   }
   
-  /* Box with max-width */
-  .coming-soon-box {
-    background: white;
-    padding: 2rem 2rem 3rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
+  .main-nav {
+    margin-top: 10px;
+    /* Add nav styling as needed */
   }
   
-  /* Heading with Amaranth font */
-  .coming-soon-box h1 {
-    font-family: 'Amaranth', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1a3f52;
+  .blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
   }
   
-  /* Paragraph with Montserrat */
-  .coming-soon-box p {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    color: #444;
+  .post-title {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #003366;
   }
   
-  /* Signup Form */
-  .signup-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    text-align: left;
-  }
-  
-  .input-group {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: nowrap;
-  }
-  
-  .input-group input[type="email"] {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-  }
-  
-  .input-group button.btn {
-    background-color: #f56800;
-    color: white;
-    border: none;
-    padding: 0 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .input-group button.btn:hover {
-    background-color: #e55a00;
-  }
-  
-  /* Back to home link */
-  .back-home a {
-    font-family: 'Montserrat', sans-serif;
-    color: #2b6cb0;
-    text-decoration: none;
+  .post-meta {
     font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 25px;
   }
   
-  .back-home a:hover {
+  .featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 30px;
+  }
+  
+  .post-content h2 {
+    color: #003366;
+    margin-top: 40px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #f56800;
+    padding-bottom: 6px;
+  }
+  
+  .post-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .post-content strong {
+    color: #000;
+  }
+  
+  .post-content a {
+    color: #e63946;
+    text-decoration: none;
+  }
+  
+  .post-content a:hover {
     text-decoration: underline;
   }
   
-  /* Responsive tweaks */
-  @media (max-width: 480px) {
-    .coming-soon-box {
-      padding: 1.5rem 1rem 2rem;
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px 0;
+  }
+  
+  .site-footer {
+    font-size: 0.9rem;
+    padding: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .post-title {
+      font-size: 1.8rem;
     }
-    .coming-soon-box h1 {
-      font-size: 1.75rem;
-    }
-    .input-group {
-      flex-direction: column;
-    }
-    .input-group button.btn {
-      width: 100%;
+  
+    .post-content h2 {
+      font-size: 1.3rem;
     }
   }
+
+  /** sharing **/
+  .sharing-box {
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+  }
+
+  /* Make this a flex container for horizontal layout */
+  .sharing-header {
+    display: flex;
+    align-items: center;   /* vertically center h4 and links */
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;      /* scroll horizontally if needed */
+  }
+
+  .sharing-header h4 {
+    margin: 0;
+    font-weight: 600;
+    color: #004a99;
+    font-size: 1.2rem;
+    white-space: nowrap;   /* prevent line breaks */
+    flex-shrink: 0;        /* don't shrink */
+  }
+
+  .social-networks {
+    display: flex;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .blog-social-icon {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    background-color: #e63946;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    user-select: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+  }
+
+  .blog-social-icon.facebook { background-color: #3b5998; }
+  .blog-social-icon.twitter { background-color: #1da1f2; }
+  .blog-social-icon.linkedin { background-color: #0077b5; }
+  .blog-social-icon.pinterest { background-color: #bd081c; }
+  .blog-social-icon.email { background-color: #666; }
+
+  .blog-social-icon:hover,
+  .blog-social-icon:focus {
+    opacity: 0.85;
+  }
+
   
